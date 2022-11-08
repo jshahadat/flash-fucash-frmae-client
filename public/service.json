@@ -1,0 +1,50 @@
+[
+    {
+        "service_id": "01",
+        "title": "The strength and fitness",
+        "img": "https://i.ibb.co/d51gBHF/camp1.webp",
+        "price": "500",
+        "rating": "3.5",
+        "description": "A fitness boot camp is a type of group physical training program that may be conducted by gyms, personal trainers or other organizations. These programs are designed to build strength and fitness through a variety of types of exercise. The activities and format may be loosely modeled on aspects of fitness training used in the military and the trainers themselves may be former military personnel. Indoor and outdoor boot camp workouts became popular in the United States in the late 1990s. Fitness boot camps as outdoor group fitness classes grew in popularity in the 2000s. These originated independently in Australia, the United States, the United Kingdom, and Canada. Strength Camp is our semi-personal training program where individuals can obtain the benefits of personal training (working safely under the guidance of a trainer) but in a group environment which can be more motivating as well as affordable. With a limit of up to 4 participants, sessions size is small, individual attention is high, and the focus is always on you."
+    },
+    {
+        "service_id": "02",
+        "title": "Kette bell",
+        "img": "https://i.ibb.co/vQSwJHL/kette.webp",
+        "price": "550",
+        "rating": "4",
+        "description": "In weight training, a kettlebell is a cast-iron or cast-steel ball with a handle attached to the top (resembling a cannonball with a handle).[1] It is used to perform many types of exercises, including ballistic exercises that combine cardiovascular, strength and flexibility training. Kettlebells are the primary equipment used in the weight-lifting sport of kettlebell lifting.By their nature, typical kettlebell exercises build strength and endurance, particularly in the lower back, legs, and shoulders, and increase grip strength. The basic movements, such as the swing, snatch, and the clean and jerk, engage the entire body at once, and in a way that mimics real world activities such as shoveling or farm work.Unlike the exercises with dumbbells or barbells, kettlebell exercises involve large numbers of repetitions in the sport, and can also involve large reps in normal training. Kettlebell exercises are in their nature holistic; therefore they work several muscles simultaneously and may be repeated continuously for several minutes or with short breaks. This combination makes the exercise partially aerobic and more similar to high-intensity interval training rather than to traditional weight lifting. In a 2010 study, kettlebell enthusiasts performing a 20-minute snatch workout were measured to burn, on average, 13.6 calories/minute aerobically and 6.6 calories/minute anaerobically during the entire workout - When training with high repetitions, kettlebell progression should start out slowly to build muscle endurance, support the joints and prevent injury."
+    },
+    {
+        "service_id": "03",
+        "title": "Personal Trainig",
+        "img": "https://i.ibb.co/BCPqqYc/perso.jpg",
+        "price": "600",
+        "rating": "2.5",
+        "description": "A personal trainer is an individual who creates and delivers safe and effective exercise programs for apparently healthy individuals and groups, or those with medical clearance to exercise. They motivate clients by collaborating to set goals, providing meaningful feedback, and by being a reliable source for accountability.[clarification needed] Trainers also conduct a variety of assessments beginning with a preparticipation health-screening and may also include assessments of posture and movement, flexibility, balance, core function, cardio-respiratory fitness, muscular fitness, body composition, and skill-related parameters (e.g. power, agility, coordination, speed, and reactivity) to observe and gather relevant information needed to develop an effective exercise program and support client goal attainment. These assessments may be performed at the beginning of and after an exercise program to measure client progress toward improved physical fitness. Trainers create exercise programs following a progression model, using the baseline assessment as the starting point of a clients physical abilities and framing the program to fit the individual personally. [1]They also provide education on many other aspects of wellness, including general health and nutrition guidelines. Helping clients to reach their full potential in various aspects of life[dubious – discuss] requires a comprehensive client-centered approach along with a belief that clients are resourceful and capable of change. Qualified personal trainers or certified personal trainers (CPTs) recognize their own areas of expertise. If a trainer suspects that one of their clients has a medical condition that could prevent the client from safe participation in an exercise program, they must refer the client to the proper health professional for medical clearance."
+    },
+    {
+        "service_id": "04",
+        "title": "Body Composition",
+        "img": "https://i.ibb.co/3cG79xM/compo.png",
+        "price": "650",
+        "rating": "3",
+        "description": "Body composition is a universal term used in the health and fitness industry. Doctors use body composition to find what percentage of your body weight is fat. This helps them find out your level of health. Body composition is important because someone else can be the same height and weight as you, but they might have more body fat and less muscle. This could lead to different health issues in them. The scale wont tell you how much of your body is made up of fat and muscle mass. But assessing body composition can help you find that. Healthier body composition is less fat and more muscle mass. Too much body fat can lead to risks like cancer, diabetes, heart disease, and other health problems.Your body is made up of water, protein, fat, and minerals. There are two types of fat in your body. "
+    },
+    {
+        "service_id": "05",
+        "title": "Mucsle Building",
+        "img": "https://i.ibb.co/TgRDDCc/build.jpg",
+        "price": "700",
+        "rating": "4.5",
+        "description": "The more protein your body stores—in a process called protein synthesis—the larger your muscles grow. But your body is constantly draining its protein reserves for other uses—making hormones, for instance.In addition to adequate protein, you need more calories. Use the following formula to calculate the number you need to take in daily to gain 1 pound a week. (Give yourself 2 weeks for results to show up on the bathroom scale. If you havent gained by then, increase your calories by 500 a day.)es, biceps curls are fun, but if you want to put on muscle, you have to do more to challenge your body. And one key to doing that, says Samuel, is working through so-called multi-joint movements. Yes, isolation training has value,says Samuel, but it can't be the backbone of your training."
+    },
+    {
+        "service_id": "06",
+        "title": "Spin Cycleing",
+        "img": "https://i.ibb.co/z26mzyr/cycleing.jpg",
+        "price": "500",
+        "rating": "5",
+        "description": "Spinning refers to studio cycling classes on a certain type of stationary exercise bike. These bikes are big and heavy, they're not meant to be moved out of the studio or your at-home pain cave, and they're not capable of outdoor riding. Spinning or Spin classes are group exercise classes focused on resistance-based intervals, heart rate training, and sometimes getting a full-body workout. The in-person instructor at the head of the class will lead you through each interval while riding along with you. Spin classes are designed to be as motivational and engaging as they are effective. Though you wont have a virtual map or much of a screen to look at, its the instructor and your classmates that will keep you motivated and pedalling. You will find high-energy music blasting throughout many Spin classes, and an extroverted instructor who helps push you to your limit."
+    }
+]
