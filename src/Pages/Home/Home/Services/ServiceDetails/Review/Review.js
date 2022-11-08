@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../../../../../contexts/AuthProvider/AuthProvider';
 
 const Review = () => {
+
+    const { user } = useContext(AuthContext);
+
+
     return (
         <div>
 

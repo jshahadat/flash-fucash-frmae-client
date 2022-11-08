@@ -1,12 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../../../../contexts/AuthProvider/AuthProvider';
 import Review from './Review/Review';
 
 
 const ServiceDetails = () => {
-    const { _id, title, price, img, description, rating } = useLoaderData();
-    const { user } = useContext(AuthContext);
+    const { title, price, img, description, rating } = useLoaderData();
+
+
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/reviews')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, []);
+
     return (
         <div>
 
@@ -29,7 +37,14 @@ const ServiceDetails = () => {
 
             {/* REview Section */}
             <div>
-                <Review></Review>
+                <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+                    {
+                        reviews.map(review => <Review
+                            key={review._id}
+                            review={review}
+                        ></Review>)
+                    }
+                </div>
             </div>
 
         </div>

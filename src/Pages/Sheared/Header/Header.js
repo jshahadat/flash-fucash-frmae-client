@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+
+
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
+
+
     return (
         <div className='ml-8 mr-10'>
             <div className='container mx-auto'>
@@ -16,7 +31,29 @@ const Header = () => {
                                 <li tabIndex={0}>
                                     <Link className="justify-between">Blog</Link>
                                 </li>
-                                <li><Link to='/login'>Login</Link></li>
+
+                                {
+                                    user?.uid ?
+                                        <>
+                                            <li>My reviews</li>
+                                            <li>Add service</li>
+                                            <li>  <button onClick={handleLogOut} variant="light">Log out</button></li>
+                                        </>
+                                        :
+                                        <>
+                                            <li>
+                                                <Link to='/login'>Login</Link></li>
+
+                                            <li>
+                                                <Link to='/register'><button >Register</button></Link>
+                                            </li>
+                                        </>
+                                }
+
+
+
+
+
                             </ul>
                         </div>
                         <Link to='/' className="btn btn-ghost normal-case text-xl">daisyUI</Link>
@@ -24,10 +61,30 @@ const Header = () => {
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal p-0">
                             <li><Link to='/'>Home</Link></li>
-                            <li tabIndex={0}>
+                            <li>
                                 <Link to='/blog' className="justify-between">Blog</Link>
                             </li>
-                            <li><Link to='/login'>Login</Link></li>
+
+                            {
+                                user?.uid ?
+                                    <>
+
+                                        <li> <Link to='' >My reviews</Link></li>
+                                        <li> <Link to='' >Add service</Link></li>
+                                        <li><button onClick={handleLogOut} >Log out</button></li>
+
+
+                                    </>
+                                    :
+                                    <>
+                                        <li>
+                                            <Link to='/login'>Login</Link></li>
+
+                                        <li>
+                                            <Link to='/register' className='text-decoration-none  '><button className=''>Register</button></Link>
+                                        </li>
+                                    </>
+                            }
                         </ul>
                     </div>
                 </div>
