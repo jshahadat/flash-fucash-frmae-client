@@ -18,7 +18,7 @@ const Header = () => {
 
 
     return (
-        <div className='ml-8 mr-10'>
+        <div className='pl-20 pr-20 mb-10'>
             <div className='container mx-auto'>
                 <div className="navbar bg-base-100 flex justify-between">
                     <div className="navbar-start">

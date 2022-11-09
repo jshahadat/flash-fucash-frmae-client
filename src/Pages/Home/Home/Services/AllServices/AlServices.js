@@ -11,8 +11,8 @@ const AlServices = () => {
             .then(data => setAllServices(data))
     }, []);
     return (
-        <div>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='container'>
+            <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-10 mr-10 mt-10'>
                 {
                     allServices.map(facility => <ServiceCard
                         key={facility._id}

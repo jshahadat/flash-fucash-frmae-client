@@ -94,31 +94,20 @@ const AddService = () => {
                                     </div>
                                 </div>
 
-
-
-
                                 <div className="relative">
-
                                     <input className="p-2 mt-5 h-28 w-full rounded-xl border" type="text" name="description" placeholder="Description" />
                                 </div>
+                                <div className='mt-5'>
 
-
-
-
-                                <div className="mt-6 grid grid-cols-3 items-center text-gray-400">
-
+                                    <input className='btn' type="submit" value="Submit Your Service" />
                                 </div>
-
-
                             </div>
 
-
-
                         </div>
+
                     </section>
 
 
-                    <input className='btn' type="submit" value="Place Your Order" />
 
                 </form>
             </div>

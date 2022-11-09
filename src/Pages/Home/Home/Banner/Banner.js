@@ -7,8 +7,8 @@ const Banner = () => {
     return (
         <div>
 
-            <div className='ml-10 mr-10'>
-                <div className='container mx-auto mr-10'>
+            <div className='container mx-auto pl-20 pr-20'>
+                <div className='container mx-auto'>
                     <div className="carousel w-full h-3/4 mr-4">
                         <div id="slide1" className="carousel-item relative w-full">
                             <img src={img3} alt='' className="w-full" />

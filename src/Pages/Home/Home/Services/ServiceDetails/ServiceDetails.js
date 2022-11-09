@@ -10,11 +10,11 @@ const ServiceDetails = () => {
 
     const [reviews, setReviews] = useState([]);
 
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/reviews')
-    //         .then(res => res.json())
-    //         .then(data => setReviews(data))
-    // }, []);
+    useEffect(() => {
+        fetch('http://localhost:5000/reviews')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, []);
 
 
 
@@ -34,7 +34,7 @@ const ServiceDetails = () => {
             comment
         }
 
-        fetch('http://localhost:5000/service', {
+        fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -60,16 +60,16 @@ const ServiceDetails = () => {
         <div>
 
             {/* Service Section */}
-            <div>
-                <h1>Cracerjack Service</h1>
+            <div className='conatner ml-20 mr-20 mt-10'>
+                <h1 className='text-5xl font-bold'>Cracerjack Service Details</h1>
 
                 <div className="card  bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
-                        <img src={img} alt="Shoes" className="rounded-xl" />
+                        <img src={img} alt="" className="rounded-xl w-full h-96" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">{title}</h2>
-                        <p>{description}</p>
+                        <p className='text-justify'>{description}</p>
                         <p>{price}</p>
                         <p>{rating}</p>
                     </div>
@@ -78,7 +78,11 @@ const ServiceDetails = () => {
 
             {/* REview Section */}
             <div>
-                <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+                <div>
+                    <h1 className='ml-20 mr-20 mt-10 text-5xl font-bold'>Reviews</h1>
+                </div>
+
+                <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-20 mr-20 mt-10'>
                     {
                         reviews.map(review => <Review
                             key={review._id}
@@ -90,7 +94,7 @@ const ServiceDetails = () => {
                 <div>
                     <form onSubmit={handleReview}>
                         <textarea name="comment" className="textarea textarea-bordered h-24 w-full" placeholder="Your comment" required></textarea>
-                        <input className='btn' type="submit" value="Place Your Order" />
+                        <input className='btn' type="submit" value="Place Your Review" />
                     </form>
 
                 </div>

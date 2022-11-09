@@ -4,7 +4,7 @@ import Supli from '../../../../assets/img/supliment.jpg'
 const Supliment = () => {
     return (
         <div>
-            <div>
+            {/* <div className='mx-auto sm:ml-10'>
 
                 <section className="flex items-center justify-center">
 
@@ -28,7 +28,7 @@ const Supliment = () => {
                         </div>
                     </div>
                 </section>
-            </div>
+            </div> */}
 
         </div>
     );

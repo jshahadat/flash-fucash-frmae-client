@@ -12,10 +12,10 @@ const Service = () => {
     }, []);
     return (
         <div className='mt-10 container mx-auto '>
-            <div>
+            <div className='pt-10 pb-10 pl-20 text-5xl font-bold'>
                 <h1>Our Crackerjack Services</h1>
             </div>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-20 mr-20'>
                 {
                     service.map(facility => <ServiceCard
                         key={facility._id}
@@ -23,8 +23,8 @@ const Service = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <div>
-                <Link to='/services'><button>See All</button></Link>
+            <div className='container pl-24 mt-10 mb-10'>
+                <Link to='/services'><button className="btn btn-primary text-2xl">See All</button></Link>
 
             </div>
 

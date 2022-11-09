@@ -5,7 +5,7 @@ const Goals = () => {
     return (
         <div>
 
-            <div>
+            {/* <div className='container mx-auto'>
 
                 <section className="flex items-center justify-center">
 
@@ -29,7 +29,7 @@ const Goals = () => {
                         </div>
                     </div>
                 </section>
-            </div>
+            </div> */}
 
         </div>
     );
