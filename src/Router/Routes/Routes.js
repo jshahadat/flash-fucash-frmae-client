@@ -7,6 +7,7 @@ import AlServices from "../../Pages/Home/Home/Services/AllServices/AlServices";
 import ServiceDetails from "../../Pages/Home/Home/Services/ServiceDetails/ServiceDetails";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
+import Myreviews from "../../Pages/MyReviews/Myreviews";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/myreviews',
+                element: <Myreviews></Myreviews>
             },
             {
                 path: '/login',
