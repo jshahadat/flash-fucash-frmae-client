@@ -69,7 +69,6 @@ const Login = () => {
 
                     .then(data => {
                         console.log(data);
-                        // local storage is the easiest but not the best place to store jwt token
                         localStorage.setItem('token', data.token);
                         form.reset();
                         setError('');

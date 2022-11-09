@@ -5,16 +5,19 @@ import Review from './Review/Review';
 
 
 const ServiceDetails = () => {
-    const { title, price, img, description, rating } = useLoaderData();
+    const { _id, title, price, img, description, rating } = useLoaderData();
+
+
     const { user } = useContext(AuthContext);
 
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch(`http://localhost:5000/reviews/${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []);
+
 
 
 
@@ -31,7 +34,8 @@ const ServiceDetails = () => {
             name,
             email,
             img,
-            comment
+            comment,
+            title
         }
 
         fetch('http://localhost:5000/reviews', {
@@ -52,7 +56,6 @@ const ServiceDetails = () => {
             })
             .catch(er => console.error(er));
     }
-
 
 
 

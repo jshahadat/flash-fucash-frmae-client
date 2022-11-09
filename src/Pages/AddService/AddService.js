@@ -95,7 +95,7 @@ const AddService = () => {
                                 </div>
 
                                 <div className="relative">
-                                    <input className="p-2 mt-5 h-28 w-full rounded-xl border" type="text" name="description" placeholder="Description" />
+                                    <input className="p-2 mt-5 h-28 w-96 rounded-xl border" type="text" name="description" placeholder="Description" />
                                 </div>
                                 <div className='mt-5'>
 
