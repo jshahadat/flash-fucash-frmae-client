@@ -41,7 +41,7 @@ const Myreviews = () => {
     }
 
     return (
-        <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-20 mr-20'>
+        <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:ml-20 ml-5 lg:mr-20 mr-5'>
 
             {
                 myReviews.map(myReview => <MyReviewsCard

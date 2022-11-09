@@ -6,7 +6,7 @@ import Supliment from './Supliment/Supliment';
 
 const Home = () => {
     return (
-        <div className=''>
+        <div>
             <Banner></Banner>
             <Service></Service>
             <Goals></Goals>

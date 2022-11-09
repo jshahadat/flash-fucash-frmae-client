@@ -96,8 +96,12 @@ const ServiceDetails = () => {
 
                 <div>
                     <form onSubmit={handleReview}>
-                        <textarea name="comment" className="textarea textarea-bordered h-24 w-full" placeholder="Your comment" required></textarea>
-                        <input className='btn' type="submit" value="Place Your Review" />
+                        <div className='pl-20 pr-24 pt-10'>
+                            <textarea name="comment" className="textarea textarea-bordered h-24 w-full" placeholder="Your comment" required></textarea>
+                        </div>
+                        <div className='pl-20'>
+                            <input className='btn' type="submit" value="Submit Your Review" />
+                        </div>
                     </form>
 
                 </div>

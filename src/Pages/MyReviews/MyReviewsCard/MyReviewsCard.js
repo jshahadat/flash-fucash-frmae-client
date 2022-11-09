@@ -17,7 +17,7 @@ const MyReviewsCard = ({ myReview, handleDelete }) => {
     const { _id, comment, rating, title } = myReview;
 
     return (
-        <div className="card w-80 bg-base-100 shadow-xl">
+        <div className="card lg:w-80 w-96 bg-base-100 shadow-xl">
             {/* <div className="card-actions justify-start mt-5 pl-5">
                 <img src='' alt="" className='w-28 h-28 rounded-full' />
             </div> */}
