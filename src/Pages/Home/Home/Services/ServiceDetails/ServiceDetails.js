@@ -8,14 +8,13 @@ const ServiceDetails = () => {
     const { title, price, img, description, rating } = useLoaderData();
     const { user } = useContext(AuthContext);
 
-
     const [reviews, setReviews] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/reviews')
-            .then(res => res.json())
-            .then(data => setReviews(data))
-    }, []);
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/reviews')
+    //         .then(res => res.json())
+    //         .then(data => setReviews(data))
+    // }, []);
 
 
 
@@ -35,7 +34,7 @@ const ServiceDetails = () => {
             comment
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('http://localhost:5000/service', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

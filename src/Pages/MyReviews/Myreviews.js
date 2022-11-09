@@ -16,6 +16,26 @@ const Myreviews = () => {
             .then(data => setMyReviews(data))
     }, [user?.email])
 
+
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure, you want to cancel this order');
+        if (proceed) {
+            fetch(`http://localhost:5000/reviews/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully');
+                        const remaining = myReviews.filter(odr => odr._id !== id);
+                        setMyReviews(remaining);
+                    }
+                })
+        }
+    }
+
     return (
         <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
 
@@ -23,6 +43,7 @@ const Myreviews = () => {
                 myReviews.map(myReview => <MyReviewsCard
                     key={myReview._id}
                     myReview={myReview}
+                    handleDelete={handleDelete}
 
                 ></MyReviewsCard>)
             }

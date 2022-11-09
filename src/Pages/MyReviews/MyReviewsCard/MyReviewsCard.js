@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { FaBeer, FaEdit, FaaDelete } from 'react-icons/fa';
-import { AiFillDelete, IconName } from "react-icons/ai";
+import React from 'react';
+import { FaEdit } from 'react-icons/fa';
+import { AiFillDelete } from "react-icons/ai";
 
 
 
 
-const MyReviewsCard = ({ myReview }) => {
-    const { comment, price } = myReview;
+const MyReviewsCard = ({ myReview, handleDelete }) => {
+    const { _id, comment } = myReview;
 
 
 
@@ -18,8 +18,10 @@ const MyReviewsCard = ({ myReview }) => {
 
             <h4 className='pb-5 pl-5'>Public Review: {comment}</h4>
             <div className='flex justify-between pb-5 pl-5 pr-5'>
+
+                <button>Delete</button>
                 <button className='className="btn btn-active btn-ghost text-3xl'><FaEdit></FaEdit></button>
-                <button className='className="btn btn-active btn-ghost text-3xl'><AiFillDelete></AiFillDelete></button>
+                <button button onClick={() => handleDelete(_id)} className='className="btn btn-active btn-ghost text-3xl'><AiFillDelete></AiFillDelete></button>
             </div>
 
         </div>
