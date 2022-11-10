@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
@@ -21,13 +21,7 @@ const EditReview = () => {
 
         event.preventDefault();
 
-        fetch(`http://localhost:5000/editReview/${signleReview._id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(rev)
-        })
+
 
 
 
@@ -49,6 +43,14 @@ const EditReview = () => {
             img,
             comment,
         }
+
+        fetch(`http://localhost:5000/editReview/${signleReview._id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
@@ -57,8 +59,8 @@ const EditReview = () => {
                 }
             })
             .catch(er => console.error(er));
-    }
 
+    }
 
     return (
         <div>

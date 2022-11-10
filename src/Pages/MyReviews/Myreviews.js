@@ -29,14 +29,16 @@ const Myreviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to cancel this order');
         if (proceed) {
+
             fetch(`http://localhost:5000/reviews/${id}`, {
+
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        toast('deleted successfully');
+                        alert('deleted successfully');
                         const remaining = myReviews.filter(odr => odr._id !== id);
                         setMyReviews(remaining);
                     }

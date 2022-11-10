@@ -35,6 +35,7 @@ const ServiceDetails = () => {
         const email = user?.email || 'unregistered';
         const img = user?.photoURL;
         const comment = form.comment.value;
+        // const time = form.time.value
 
         // const newReview = { ...reviews };
         // newReview[name] = value
@@ -46,7 +47,8 @@ const ServiceDetails = () => {
             email,
             img,
             comment,
-            title
+            title,
+            // time
         }
 
         fetch('http://localhost:5000/reviews', {
@@ -111,7 +113,13 @@ const ServiceDetails = () => {
 
                 <div>
                     <form onSubmit={handleReview}>
-                        <div className='pl-20 pr-24 pt-10'>
+                        <div>
+                            {/* <div className=' pl-20 pr-24 pt-10'>
+                                <input className="p-2 w-full  rounded-xl border" type="text" name="time"
+                                    placeholder="Add Your Local time" />
+                            </div> */}
+                        </div>
+                        <div className='pl-20 pr-24 pt-2'>
                             <textarea name="comment" className="textarea textarea-bordered h-24 w-full" placeholder="Your comment" required></textarea>
                         </div>
                         <div className='pl-20'>

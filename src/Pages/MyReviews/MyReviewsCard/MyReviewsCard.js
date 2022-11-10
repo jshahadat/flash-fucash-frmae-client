@@ -11,7 +11,7 @@ const MyReviewsCard = ({ myReview, handleDelete }) => {
 
 
 
-
+    // console.log(myReview);
 
 
     const { _id, comment, rating, title } = myReview;
