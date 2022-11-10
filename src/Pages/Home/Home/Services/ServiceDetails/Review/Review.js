@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Review = ({ review }) => {
     const { name, comment, img, title } = review;
 
@@ -21,11 +20,6 @@ const Review = ({ review }) => {
                         <h2 className='mt-4'>Reviewer: {name}</h2>
                     </div>
                 </div>
-
-
-
-
-
             </div>
 
         </div >

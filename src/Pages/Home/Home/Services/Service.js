@@ -4,7 +4,6 @@ import ServiceCard from '../../../Sheared/ServiceCard/ServiceCard';
 
 const Service = () => {
     const [service, setService] = useState([]);
-
     useEffect(() => {
         fetch('http://localhost:5000/service')
             .then(res => res.json())
@@ -25,9 +24,7 @@ const Service = () => {
             </div>
             <div className='container lg:pl-24 pl-5  mt-10 mb-10'>
                 <Link to='/services'><button className="btn btn-primary text-2xl">See All</button></Link>
-
             </div>
-
         </div>
     );
 };

@@ -4,16 +4,9 @@ import { AiFillDelete } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
-
-
-
 const MyReviewsCard = ({ myReview, handleDeleteReview }) => {
 
-
-
     // console.log(myReview);
-
-
     const { _id, comment, rating, title } = myReview;
 
     return (

@@ -14,10 +14,6 @@ const ServiceCard = ({ facility }) => {
                         <figure><img src={img} alt="" className='h-52 w-full' /></figure>
                     </PhotoView>
                 </PhotoProvider>
-
-
-
-                {/* <figure><img src={img} alt="" className='h-52 w-full' /></figure> */}
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     <p>{price} ৳</p>
