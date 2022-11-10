@@ -63,8 +63,9 @@ const Register = () => {
                         {/* <p className="text-xs mt-4 text-[#002D74]">If you are already a member, easily log in</p> */}
 
                         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                            <input className="p-2  rounded-xl border" type="Text" name="name" placeholder="Your Name" />
-                            <input className="p-2  rounded-xl border" type="email" name="email" placeholder="Email" />
+                            {/* <input className="p-2  rounded-xl border" type="Text" name="photoUrl" placeholder="Your PhotoUrl" required /> */}
+                            <input className="p-2  rounded-xl border" type="Text" name="name" placeholder="Your Name" required />
+                            <input className="p-2  rounded-xl border" type="email" name="email" placeholder="Email" required />
                             <div className="relative">
                                 <input className="p-2 rounded-xl border w-full" type="password" name="password" placeholder="Password" />
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" className="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2" viewBox="0 0 16 16">

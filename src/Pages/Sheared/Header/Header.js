@@ -56,7 +56,7 @@ const Header = () => {
 
                             </ul>
                         </div>
-                        <Link to='/' className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+                        <Link to='/' className="btn btn-ghost normal-case text-xl"><span><img className='h-6 w-6 rounded-sm' src="https://i.ibb.co/0YwTWXS/camera.png" alt="" /></span> <span>Perfect PhotoGrapher</span></Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal p-0">
