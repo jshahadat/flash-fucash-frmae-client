@@ -13,7 +13,7 @@ const Register = () => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        // const photoURL = form.photoURL.value;
+        const photoUrl = form.photoUrl.value;
         const email = form.email.value
         const password = form.password.value;
 
@@ -23,7 +23,7 @@ const Register = () => {
                 console.log(user);
                 setError('');
                 form.reset();
-                handleUpdateUserProfile(name);
+                handleUpdateUserProfile(name, photoUrl);
             })
             .catch(error => {
                 console.error(error);
@@ -35,10 +35,10 @@ const Register = () => {
     }
 
 
-    const handleUpdateUserProfile = (name, photoURL) => {
+    const handleUpdateUserProfile = (name, photoUrl) => {
         const profile = {
             displayName: name,
-            photoURL: photoURL
+            photoURL: photoUrl
         }
         updateUserProfile(profile)
             .catch(error => console.error(error))
@@ -63,7 +63,7 @@ const Register = () => {
                         {/* <p className="text-xs mt-4 text-[#002D74]">If you are already a member, easily log in</p> */}
 
                         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                            {/* <input className="p-2  rounded-xl border" type="Text" name="photoUrl" placeholder="Your PhotoUrl" required /> */}
+                            <input className="p-2  rounded-xl border" type="Text" name="photoUrl" placeholder="Your PhotoUrl" required />
                             <input className="p-2  rounded-xl border" type="Text" name="name" placeholder="Your Name" required />
                             <input className="p-2  rounded-xl border" type="email" name="email" placeholder="Email" required />
                             <div className="relative">

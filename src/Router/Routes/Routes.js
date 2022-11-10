@@ -3,6 +3,7 @@ import ErrorPage from "../../../../assignment-eleventh-client/src/Pages/ErrorPag
 import Main from "../../Layout/Main";
 import AddService from "../../Pages/AddService/AddService";
 import Blog from "../../Pages/Blog/Blog";
+import Condition from "../../Pages/Condition/Condition";
 import Home from "../../Pages/Home/Home/Home";
 import AlServices from "../../Pages/Home/Home/Services/AllServices/AlServices";
 import ServiceDetails from "../../Pages/Home/Home/Services/ServiceDetails/ServiceDetails";
@@ -51,6 +52,12 @@ const router = createBrowserRouter([
 
 
             },
+            {
+                path: '/condition',
+                element: <Condition></Condition>
+
+            },
+
             {
                 path: '/login',
                 element: <Login></Login>,

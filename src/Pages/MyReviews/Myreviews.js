@@ -9,15 +9,12 @@ const Myreviews = () => {
     const { user } = useContext(AuthContext);
 
     const [myReviews, setMyReviews] = useState([])
-    console.log(myReviews);
-
-
 
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
             headers: {
-                authorization: `Bearer${localStorage.getItem('token')}`
+                authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
             .then(res => res.json())
@@ -26,8 +23,8 @@ const Myreviews = () => {
 
 
 
-    const handleDelete = id => {
-        const proceed = window.confirm('Are you sure, you want to cancel this order');
+    const handleDeleteReview = id => {
+        const proceed = window.confirm('Are you confirm?');
         if (proceed) {
 
             fetch(`http://localhost:5000/reviews/${id}`, {
@@ -38,7 +35,7 @@ const Myreviews = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully');
+                        toast('Deleted successfully');
                         const remaining = myReviews.filter(odr => odr._id !== id);
                         setMyReviews(remaining);
                     }
@@ -54,7 +51,7 @@ const Myreviews = () => {
                     myReviews.map(myReview => <MyReviewsCard
                         key={myReview._id}
                         myReview={myReview}
-                        handleDelete={handleDelete}
+                        handleDeleteReview={handleDeleteReview}
                     ></MyReviewsCard>)
                 }
             </div>

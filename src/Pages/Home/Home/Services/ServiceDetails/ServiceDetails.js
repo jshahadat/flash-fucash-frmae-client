@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../../../contexts/AuthProvider/AuthProvider';
 import Review from './Review/Review';
 import { FaStar } from 'react-icons/fa'
@@ -12,6 +12,8 @@ const ServiceDetails = () => {
 
 
     const { user } = useContext(AuthContext);
+
+    const navigate = useNavigate();
 
     const [reviews, setReviews] = useState([]);
     console.log([reviews._id]);
@@ -36,6 +38,8 @@ const ServiceDetails = () => {
         const img = user?.photoURL;
         const comment = form.comment.value;
         // const time = form.time.value
+        const d = new Date();
+        const time = d.getTime()
 
         // const newReview = { ...reviews };
         // newReview[name] = value
@@ -48,7 +52,7 @@ const ServiceDetails = () => {
             img,
             comment,
             title,
-            // time
+            time
         }
 
         fetch('http://localhost:5000/reviews', {
@@ -71,7 +75,10 @@ const ServiceDetails = () => {
     }
 
 
+    const handleCondition = () => {
+        navigate('/condition');
 
+    }
 
     return (
         <div>
@@ -123,7 +130,16 @@ const ServiceDetails = () => {
                             <textarea name="comment" className="textarea textarea-bordered h-24 w-full" placeholder="Your comment" required></textarea>
                         </div>
                         <div className='pl-20'>
-                            <input className='btn' type="submit" value="Submit Your Review" />
+                            {
+                                user?.email ?
+                                    <>
+                                        <input className='btn' type="submit" value="Submit Your Review" />
+                                    </>
+                                    :
+                                    <>
+                                        <input onClick={handleCondition} className='btn' type="submit" value="Submit Your Review" />
+                                    </>
+                            }
                         </div>
                     </form>
 

@@ -7,7 +7,7 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 
 
-const MyReviewsCard = ({ myReview, handleDelete }) => {
+const MyReviewsCard = ({ myReview, handleDeleteReview }) => {
 
 
 
@@ -29,7 +29,7 @@ const MyReviewsCard = ({ myReview, handleDelete }) => {
 
                 <Link to={`/editreview/${_id}`}>
                     <button className='className="btn btn-active btn-ghost text-3xl'><FaEdit></FaEdit></button></Link>
-                <button button onClick={() => handleDelete(_id)} className='className="btn btn-active btn-ghost text-3xl'><AiFillDelete></AiFillDelete></button>
+                <button button onClick={() => handleDeleteReview(_id)} className='className="btn btn-active btn-ghost text-3xl'><AiFillDelete></AiFillDelete></button>
             </div>
 
         </div>
