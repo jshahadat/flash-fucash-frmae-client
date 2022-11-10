@@ -18,7 +18,7 @@ const Header = () => {
 
 
     return (
-        <div className='pl-20 pr-20 mb-10'>
+        <div className='lg:pl-20 pl-10  lg:pr-20 pr-10 mb-10'>
             <div className='container mx-auto'>
                 <div className="navbar bg-base-100 flex justify-between">
                     <div className="navbar-start">
@@ -29,7 +29,7 @@ const Header = () => {
                             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><Link to='/'>Home</Link></li>
                                 <li tabIndex={0}>
-                                    <Link className="justify-between">Blog</Link>
+                                    <Link to='/blog' className="justify-between">Blog</Link>
                                 </li>
 
                                 {

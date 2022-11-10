@@ -11,7 +11,7 @@ const Service = () => {
             .then(data => setService(data))
     }, []);
     return (
-        <div className='mt-10 container mx-auto '>
+        <div className='container mx-auto '>
             <div className='pt-10 pb-10 lg:pl-20 pl-5 lg:text-5xl text-4xl font-bold'>
                 <h1>Our Crackerjack Services</h1>
             </div>

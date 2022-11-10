@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddService = () => {
     const { user } = useContext(AuthContext);
@@ -44,7 +46,7 @@ const AddService = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Order placed successfully')
+                    toast('Your service Add successfully')
                     form.reset();
 
                 }
@@ -61,48 +63,51 @@ const AddService = () => {
                 <form onSubmit={handleAddService}>
 
 
+                    {/* bg-gray-50 pt-10 pb-10 flex items-center  */}
+                    {/* md:w-1/2 px-8 md:px-16 */}
 
+                    <section className="flex mr-10 ml-10 justify-center">
 
-                    <section className="bg-gray-50 pt-10 pb-10 flex items-center justify-center">
+                        <div className="bg-gray-100 flex rounded-2xl shadow-lg  lg:w-fit w-96 p-5 items-center">
 
-                        <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5 items-center">
+                            <div className='flex justify-center'>
+                                <div className="">
+                                    <h2 className="font-bold text-2xl text-[#002D74]">Add Your Service</h2>
 
-                            <div className="md:w-1/2 px-8 md:px-16">
-                                <h2 className="font-bold text-2xl text-[#002D74]">Add Your Service</h2>
+                                    <div className='lg:flex'>
+                                        <div className=' pb-6 lg:mr-6'>
+                                            <input className="p-2 w-full  rounded-xl border" type="text" name="title"
+                                                placeholder="Add Your Service Name" />
+                                        </div>
+                                        <div className="relative  ">
 
-                                <div className='flex'>
-                                    <div className='pr-4'>
-                                        <input className="p-2 rounded-xl border" type="text" name="title"
-                                            placeholder="Add Your Service Name" />
+                                            <input className="p-2 w-full rounded-xl border" type="text" name="img" placeholder="Service Photo Url " />
+                                        </div>
                                     </div>
+
+
+                                    <div className='lg:flex mt-5'>
+
+                                        <div className="relative pb-6 lg:mr-6">
+
+                                            <input className="w-full p-2 rounded-xl border" type="text" name="price" placeholder="Service Price" />
+                                        </div>
+                                        <div className="relative">
+
+                                            <input className="p-2 w-full rounded-xl border" type="text" name="rating" placeholder="Rating/5" />
+                                        </div>
+                                    </div>
+
                                     <div className="relative">
+                                        <input className="p-2 mt-5 h-28 lg:w-96 w-full rounded-xl border" type="text" name="description" placeholder="Description" />
+                                    </div>
+                                    <div className='mt-5'>
 
-                                        <input className="p-2 rounded-xl border" type="text" name="img" placeholder="Service Photo Url " />
+                                        <input className='btn' type="submit" value="Submit Your Service" />
                                     </div>
                                 </div>
 
-
-                                <div className='flex mt-5'>
-
-                                    <div className="relative pr-4">
-
-                                        <input className="p-2 rounded-xl border" type="text" name="price" placeholder="Service Price" />
-                                    </div>
-                                    <div className="relative">
-
-                                        <input className="p-2 rounded-xl border" type="text" name="rating" placeholder="Rating/5" />
-                                    </div>
-                                </div>
-
-                                <div className="relative">
-                                    <input className="p-2 mt-5 h-28 w-96 rounded-xl border" type="text" name="description" placeholder="Description" />
-                                </div>
-                                <div className='mt-5'>
-
-                                    <input className='btn' type="submit" value="Submit Your Service" />
-                                </div>
                             </div>
-
                         </div>
 
                     </section>
@@ -111,6 +116,7 @@ const AddService = () => {
 
                 </form>
             </div>
+            <ToastContainer></ToastContainer>
 
         </div>
     );

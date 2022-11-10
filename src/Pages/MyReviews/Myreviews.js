@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import MyReviewsCard from './MyReviewsCard/MyReviewsCard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Myreviews = () => {
 
@@ -32,7 +34,7 @@ const Myreviews = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully');
+                        toast('deleted successfully');
                         const remaining = myReviews.filter(odr => odr._id !== id);
                         setMyReviews(remaining);
                     }
@@ -41,16 +43,18 @@ const Myreviews = () => {
     }
 
     return (
-        <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:ml-20 ml-5 lg:mr-20 mr-5'>
+        <div>
+            <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:ml-20 ml-5 lg:mr-20 mr-5'>
 
-            {
-                myReviews.map(myReview => <MyReviewsCard
-                    key={myReview._id}
-                    myReview={myReview}
-                    handleDelete={handleDelete}
-
-                ></MyReviewsCard>)
-            }
+                {
+                    myReviews.map(myReview => <MyReviewsCard
+                        key={myReview._id}
+                        myReview={myReview}
+                        handleDelete={handleDelete}
+                    ></MyReviewsCard>)
+                }
+            </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

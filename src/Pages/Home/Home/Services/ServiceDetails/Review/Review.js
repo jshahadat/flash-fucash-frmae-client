@@ -5,9 +5,9 @@ const Review = ({ review }) => {
     const { name, comment, img, title } = review;
 
     return (
-        <div>
+        <div className='pl-4'>
 
-            <div className="card w-80 bg-base-100 shadow-xl">
+            <div className="card lg:w-80 w-96  bg-base-100 shadow-xl">
 
                 <h3 className='ml-5 mt-5 text-lg font-bold'>Service Name: {title}</h3>
                 <h4 className='pb-5 pl-5'>{comment}</h4>

@@ -25,7 +25,7 @@ const MyReviewsCard = ({ myReview, handleDelete }) => {
             <h4 className='pb-5 pl-5'>Your Review: {comment}</h4>
             <div className='flex justify-between pb-5 pl-5 pr-5'>
 
-                <button>Delete {rating}</button>
+                <button>.{rating}</button>
 
                 <Link to={`/editreview/${_id}`}>
                     <button className='className="btn btn-active btn-ghost text-3xl'><FaEdit></FaEdit></button></Link>
